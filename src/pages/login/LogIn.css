@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&family=Roboto:wght@400;700&display=swap');
+
+/* Login Container */
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: row;
+    background: url("../../../public/bg-full.jpg") no-repeat center center / cover;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Login Form Styling */
+.login form {
+    width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid #e0e0e0;
+}
+
+.login form input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: #f9f9f9;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    transition: border-color 0.3s;
+}
+
+.login form input:focus {
+    border-color: #000000;
+}
+
+.login form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login form button:hover {
+    background-color: #005bb5;
+}
+
+/* Link Styling */
+.login a {
+    font-size: 14px;
+    color: #000000;
+    text-decoration: underline;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.login-text {
+    margin-bottom: 20px;
+    color: #ffffff;
+    font-family: "Patrick Hand SC", cursive;
+    font-size: 30px;
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #333333; /* Darker background color */
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: slide-in 1s ease forwards;
+    display: inline-block;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.login-text:hover {
+    background-color: #555555; /* Slightly lighter on hover */
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+@keyframes slide-in {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 600px) {
+    .login {
+        flex-direction: column;
+        background: url("../../../public/bg-full.jpg") no-repeat center center / cover;
+    }
+
+    .login form {
+        width: 280px;
+        padding: 30px;
+    }
+
+    .login form button {
+        padding: 12px;
+        font-size: 14px;
+    }
+
+    .login-text {
+        font-size: 24px;
+        margin-top: 10px;
+    }
+}
